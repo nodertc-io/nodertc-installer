@@ -9,6 +9,7 @@ BINARY_NAME="nodertc-client-agent"
 DOWNLOAD_PATH="/tmp/$BINARY_NAME"
 INSTALL_PATH="/usr/local/bin"
 SERVICE_NAME="nodertc-client-agent"
+AGENT_CONF_FILE="~/.nodertc/conf/agent.conf"
 
 # Color codes
 BLUE='\033[0;34m'
@@ -39,7 +40,7 @@ Description=$BINARY_NAME Service
 After=network.target
 
 [Service]
-ExecStart=$INSTALL_PATH/$BINARY_NAME
+ExecStart=$INSTALL_PATH/$BINARY_NAME -c $AGENT_CONF_FILE
 Restart=always
 User=nobody
 Group=nogroup
