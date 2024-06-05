@@ -4,8 +4,9 @@
 set -e
 
 # Variables
-REPO_URL="https://github.com/nodertc-io/nodertc-installer/blob/v1.0.0/nodertc-client-agent"
+REPO_URL="https://github.com/nodertc-io/nodertc-installer/raw/v1.0.0/nodertc-client-agent"
 BINARY_NAME="nodertc-client-agent"
+DOWNLOAD_PATH="/tmp/$BINARY_NAME"
 INSTALL_PATH="/usr/local/bin"
 SERVICE_NAME="nodertc-client-agent"
 
@@ -19,14 +20,14 @@ NC='\033[0m'  # No Color
 # Function to download the binary
 download_binary() {
     echo -e "${BLUE}Downloading $BINARY_NAME from $REPO_URL...${NC}"
-    curl -L $REPO_URL -o $BINARY_NAME
-    chmod +x $BINARY_NAME
+    curl -L $REPO_URL -o $DOWNLOAD_PATH
+    chmod +x $DOWNLOAD_PATH
 }
 
 # Function to install the binary
 install_binary() {
     echo -e "${YELLOW}Installing $BINARY_NAME to $INSTALL_PATH...${NC}"
-    sudo mv $BINARY_NAME $INSTALL_PATH
+    sudo mv $DOWNLOAD_PATH $INSTALL_PATH
 }
 
 # Function to create systemd service file
