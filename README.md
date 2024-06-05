@@ -1,6 +1,6 @@
-# NodeRTC Agent Installer
+## NodeRTC Agent Installer
 
-### 1. Client
+### Client
 
 * Create your nodertc client agent toml configuration file under /home/$USER/.nodertc/conf, where $USER is your user.
 
@@ -73,6 +73,6 @@ keepTunnelOpen = false
 curl -sL https://raw.githubusercontent.com/nodertc-io/nodertc-installer/v1.0.0/nodertc-client-agent-install.bash | bash
 ```
 
-### 2. Server
+### Server
 
 Coming soon...
