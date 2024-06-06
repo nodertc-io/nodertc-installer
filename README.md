@@ -90,5 +90,5 @@ localPort = "{{ .Envs.NODERTC_SSH_PORT }}"
 ### Install the client agent:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/nodertc-io/nodertc-installer/v1.0.0/nodertc-client-agent-install.bash | bash
+curl -sL https://raw.githubusercontent.com/nodertc-io/nodertc-installer/v1.0.0/nodertc-agent-install.bash | bash
 ```
