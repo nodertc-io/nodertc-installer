@@ -4,11 +4,11 @@
 set -e
 
 # Variables
-REPO_URL="https://github.com/nodertc-io/nodertc-installer/raw/v1.0.0/nodertc-client-agent"
-BINARY_NAME="nodertc-client-agent"
+REPO_URL="https://github.com/nodertc-io/nodertc-installer/raw/v1.0.0/nodertc-agent"
+BINARY_NAME="nodertc-agent"
 DOWNLOAD_PATH="/tmp/$BINARY_NAME"
 INSTALL_PATH="/usr/local/bin"
-SERVICE_NAME="nodertc-client-agent"
+SERVICE_NAME="nodertc-agent"
 AGENT_CONF_FILE="/home/$USER/.nodertc/conf/agent.conf"
 
 # Color codes
